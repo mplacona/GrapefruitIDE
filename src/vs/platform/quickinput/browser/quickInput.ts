@@ -1282,7 +1282,7 @@ export class QuickInputHoverDelegate extends WorkbenchHoverDelegate {
 			persistence: {
 				hideOnKeyDown: false,
 			},
-			apblueberryance: {
+			apgrapefruidIDEance: {
 				showHoverHint,
 				skipFadeInAnimation: true,
 			},

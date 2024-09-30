@@ -232,11 +232,11 @@ app.on('ready', () => {
 		return {
 			product: {
 				version: '1.x.y',
-				nameShort: 'blueberryAI Dev',
-				nameLong: 'blueberryAI Dev',
-				applicationName: 'blueberryai',
-				dataFolderName: '.blueberryai',
-				urlProtocol: 'blueberryai',
+				nameShort: 'GrapefruitIDE Dev',
+				nameLong: 'GrapefruitIDE Dev',
+				applicationName: 'grapefruitide',
+				dataFolderName: '.grapefruitide',
+				urlProtocol: 'grapefruitide',
 			}
 		};
 	});

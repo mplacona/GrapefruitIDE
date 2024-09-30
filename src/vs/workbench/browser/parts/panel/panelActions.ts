@@ -46,7 +46,7 @@ export class TogglePanelAction extends Action2 {
 			keybinding: { primary: KeyMod.CtrlCmd | KeyCode.KeyJ, weight: KeybindingWeight.WorkbenchContrib },
 			menu: [
 				{
-					id: MenuId.MenubarApblueberryanceMenu,
+					id: MenuId.MenubarApgrapefruidIDEanceMenu,
 					group: '2_workbench_layout',
 					order: 5
 				}, {
@@ -151,7 +151,7 @@ const AlignPanelActionConfigs: PanelActionConfig<PanelAlignment>[] = [
 
 
 
-MenuRegistry.appendMenuItem(MenuId.MenubarApblueberryanceMenu, {
+MenuRegistry.appendMenuItem(MenuId.MenubarApgrapefruidIDEanceMenu, {
 	submenu: MenuId.PanelPositionMenu,
 	title: localize('positionPanel', "Panel Position"),
 	group: '3_workbench_layout_move',
@@ -186,7 +186,7 @@ PositionPanelActionConfigs.forEach(positionPanelAction => {
 	});
 });
 
-MenuRegistry.appendMenuItem(MenuId.MenubarApblueberryanceMenu, {
+MenuRegistry.appendMenuItem(MenuId.MenubarApgrapefruidIDEanceMenu, {
 	submenu: MenuId.PanelAlignmentMenu,
 	title: localize('alignPanel', "Align Panel"),
 	group: '3_workbench_layout_move',
@@ -418,19 +418,19 @@ class MoveViewsBetweenPanelsAction extends Action2 {
 }
 
 
-// Move blueberry AI extension to secondary side bar (Auxiliary Bar) (we want secondary side bar to be default loaction for extension)
-class MoveblueberryExtensionToAuxBarAction extends MoveViewsBetweenPanelsAction {
-    static readonly ID = 'workbench.action.moveblueberryExtensionToAuxBar';
-		readonly blueberryExtensionId;
+// Move grapefruidIDE AI extension to secondary side bar (Auxiliary Bar) (we want secondary side bar to be default loaction for extension)
+class MovegrapefruidIDEExtensionToAuxBarAction extends MoveViewsBetweenPanelsAction {
+    static readonly ID = 'workbench.action.movegrapefruidIDEExtensionToAuxBar';
+		readonly grapefruidIDEExtensionId;
 
     constructor() {
         super(ViewContainerLocation.Sidebar, ViewContainerLocation.AuxiliaryBar, {
-            id: MoveblueberryExtensionToAuxBarAction.ID,
-            title: localize2('moveblueberryExtensionToAuxBar', "Move blueberry Extension to Auxiliary Bar"),
+            id: MovegrapefruidIDEExtensionToAuxBarAction.ID,
+            title: localize2('movegrapefruidIDEExtensionToAuxBar', "Move grapefruidIDE Extension to Auxiliary Bar"),
             category: Categories.View,
             f1: true
         });
-        this.blueberryExtensionId = 'workbench.view.extension.blueberryAI';
+        this.grapefruidIDEExtensionId = 'workbench.view.extension.GrapefruitIDE';
     }
 
     override run(accessor: ServicesAccessor): void {
@@ -438,7 +438,7 @@ class MoveblueberryExtensionToAuxBarAction extends MoveViewsBetweenPanelsAction 
         const layoutService = accessor.get(IWorkbenchLayoutService);
         const viewsService = accessor.get(IViewsService);
 
-        const viewContainer = viewDescriptorService.getViewContainerById(this.blueberryExtensionId);
+        const viewContainer = viewDescriptorService.getViewContainerById(this.grapefruidIDEExtensionId);
 				const destination = ViewContainerLocation.AuxiliaryBar;
 
         if (viewContainer) {
@@ -449,7 +449,7 @@ class MoveblueberryExtensionToAuxBarAction extends MoveViewsBetweenPanelsAction 
     }
 }
 
-registerAction2(MoveblueberryExtensionToAuxBarAction);
+registerAction2(MovegrapefruidIDEExtensionToAuxBarAction);
 
 // --- Move Panel Views To Secondary Side Bar
 

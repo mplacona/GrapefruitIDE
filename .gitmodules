@@ -1,4 +1,4 @@
-[submodule "extensions/blueberryai-submodule"]
-	path = extensions/blueberryai-submodule
-	url = https://github.com/tryblueberry/blueberryai-submodule.git
+[submodule "extensions/grapefruitide-submodule"]
+	path = extensions/grapefruitide-submodule
+	url = https://github.com/mplacona/grapefruidIDE/grapefruitide-submodule.git
 	branch = main
